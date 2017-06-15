@@ -14,19 +14,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Mi Super Aplicación Angular';
-  
-  contactos: string[] = [
-    'Son Goku',
-    'Megaman',
-    'Spider-Man',
-    'Sheldon Cooper',
-    'Chicho Terremoto'
 
-  ];
+  // Atributo a nivel de instancia
+  contactos: string[];
 
-// Se implementa la función OnInit
+  // En el hook 'OnInit' se inicializan los datos del componente.
   ngOnInit () {
-    console.log('I am Groot!');
+    this.contactos = [
+      'Son Goku',
+      'Megaman',
+      'Spider-Man',
+      'Sheldon Cooper',
+      'Chicho Terremoto'
+    ];
   }
 }
