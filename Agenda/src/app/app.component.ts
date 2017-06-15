@@ -28,4 +28,16 @@ export class AppComponent implements OnInit {
       'Chicho Terremoto'
     ];
   }
+
+  eliminarContacto(contacto: string): void {
+    // Se elimina el contacto del array mediante un filtro
+    // this.contactos = this.contactos.filter((c: string): boolean => {
+    //  return c !== contacto;
+    // });
+
+    // Se elimina el contacto del array mediante una eliminación de la 
+    // posición del registro
+    let posicion = this.contactos.indexOf(contacto);
+    this.contactos.splice(posicion, 1);
+  }
 }

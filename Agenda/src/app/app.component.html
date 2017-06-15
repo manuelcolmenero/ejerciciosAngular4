@@ -5,4 +5,6 @@
 <!-- 
   Para enlazar los datos de un componente hijo, basta con indicar el atributo que se ha expuesto en éste. Si se quiere evaluar una expresión previamente a su asignación como valor del atributo, se envuelve con corchetes el atributo
 -->
-<lista-contactos [datos]="contactos"></lista-contactos>
+<lista-contactos 
+  [datos]="contactos"
+  (clicBotonEliminar)="eliminarContacto($event)"></lista-contactos>
