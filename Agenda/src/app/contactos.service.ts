@@ -24,6 +24,9 @@ export class ContactosService {
     return this._contactos;
   }
   
+  altaContacto (contacto: string): void {
+    this._contactos.push(contacto);
+  }
 
   eliminarContacto(contacto: string): void {
     // Se elimina el contacto del array mediante un filtro

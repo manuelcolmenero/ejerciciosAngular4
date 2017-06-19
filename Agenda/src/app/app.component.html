@@ -2,6 +2,12 @@
   <h1>Mi Agenda</h1>
 </header>
 
+<!-- Se incluye el formulario de alta -->
+<formulario-alta
+  (clickBotonGuardar)="guardarContacto($event)"
+>
+</formulario-alta>
+
 <!-- 
   Para enlazar los datos de un componente hijo, basta con indicar el atributo que se ha expuesto en éste. Si se quiere evaluar una expresión previamente a su asignación como valor del atributo, se envuelve con corchetes el atributo
 -->

@@ -34,6 +34,11 @@ export class AppComponent implements OnInit {
     this.contactos = this._contactosService.obtenerContactos();
   }
 
+  guardarContacto(contacto: string): void {
+    this._contactosService.altaContacto(contacto);
+    this.contactos = this._contactosService.obtenerContactos();
+  }
+
   eliminarContacto(contacto: string): void {
     // La función eliminar contacto es la que se encuentra enlazada 
     // con el boton (es el manejador) por lo que se mantiene y dentro 

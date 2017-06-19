@@ -1,0 +1,26 @@
+<!-- 
+  Se incluye el formulario para el alta de contactos.
+  Para trabajar con formularios se necesita hacer uso de la directiva 'ngForm'.
+  Para obtener la referencia a la instancia 'FormGroup' del formulario, se usa un template reference variable, a la cual se le asigna como valor la propia directiva 'ngForm'
+-->
+<form ngForm #formularioContacto="ngForm" (ngSubmit)="notificarContacto(formularioContacto)">
+  <!--
+    Se incluye una caja para dar de alta contactos
+    Para trabajar con elementos de formulario se necesita hacer 
+    uso de la directiva 'ngModel'.
+    Para obtener la referencia a la instancia 'FormControl' del 
+    elemento, se utiliza un template reference variable, al 
+    cual se le asisgna como valor la propia directiva 'ngModel'.
+  -->
+  <input 
+  type="text"
+  ngModel
+  name="nombreContacto"
+  #nombreContactoRef="ngModel"
+  >
+
+  <!--
+    Se incluye el boton de guardar
+  -->
+  <button type="submit">Guardar contacto</button>
+</form>
