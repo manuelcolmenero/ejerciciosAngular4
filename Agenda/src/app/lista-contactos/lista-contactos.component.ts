@@ -20,11 +20,4 @@ export class ListaContactosComponent {
     // Se notifica 
     this.clicBotonEliminar.emit(regEliminar);
   }
-
-  esSpiderman (contacto: string): boolean {
-    return contacto.indexOf('Spider-Man') > -1;
-  }
-    esGokuChicho (contacto: string): string {
-    return contacto.indexOf('Son Goku') > -1 || contacto.indexOf('Chicho Terremoto') > -1 ? '32px' : '14px';
-  }
 }
