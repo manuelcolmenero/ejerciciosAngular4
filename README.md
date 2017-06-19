@@ -4,7 +4,7 @@
 - - -
 
 ## **Sinopsis**
-Ejercicios Angular4 realizados durante las clases
+Ejercicios Angular4 realizados durante las clases. El objetivo final es crear una aplicación Angular de Agenda básica.
 
 ## **Detalle**
 Contenido realizado:
