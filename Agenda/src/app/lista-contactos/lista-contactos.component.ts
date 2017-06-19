@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Contacto } from "../contacto";
 
 @Component({
   selector: 'lista-contactos',
@@ -9,14 +10,14 @@ export class ListaContactosComponent {
 
   // Con el decorador Input se exponen atributos para 
   // que puedan enlazar datos desde otros componentes
-  @Input () datos: string[];
+  @Input () datos: Contacto[];
 
   // Con el decorador 'Output' se exponen eventos a otros
   // componentes. Es necesario, además, que el atributo
   // decorado sea de tipo 'EventEmitter'
-  @Output () clicBotonEliminar = new EventEmitter<string>();
+  @Output () clicBotonEliminar = new EventEmitter<Contacto>();
 
-  notificarEliminacion(regEliminar: string): void {
+  notificarEliminacion(regEliminar: Contacto): void {
     // Se notifica 
     this.clicBotonEliminar.emit(regEliminar);
   }

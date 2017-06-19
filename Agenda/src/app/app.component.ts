@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactosService } from "app/contactos.service";
+import { Contacto } from './contacto';
 
 @Component({
   // En 'selector' se indica el elemento HTML donde se instanciará 
@@ -17,7 +18,7 @@ import { ContactosService } from "app/contactos.service";
 export class AppComponent implements OnInit {
 
   // Atributo a nivel de instancia
-  contactos: string[];
+  contactos: Contacto[];
 
   // Para hacer una inyección de dependencias se necesita hacerlo
   // en el constructor de una clase. Se ha de indicar un 
@@ -34,7 +35,7 @@ export class AppComponent implements OnInit {
     this.contactos = this._contactosService.obtenerContactos();
   }
 
-  guardarContacto(contacto: string): void {
+  guardarContacto(contacto: Contacto): void {
     this._contactosService.altaContacto(contacto);
     this.contactos = this._contactosService.obtenerContactos();
   }

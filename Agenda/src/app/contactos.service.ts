@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Contacto } from './contacto';
 
 // Un servicio es una clase decorada con 'Injectable'. Este decorador 
 // no necesita que se le indique ningún metadato. Es importante que no 
@@ -7,24 +8,24 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ContactosService {
 
-  private _contactos: string[];
+  private _contactos: Contacto[];
 
   constructor() { 
     this._contactos = [
-      'Son Goku',
-      'Megaman',
-      'Spider-Man',
-      'Sheldon Cooper',
-      'Chicho Terremoto'
+      new Contacto ('Son Goku'),
+      new Contacto ('Megaman'),
+      new Contacto ('Spider-Man'),
+      new Contacto ('Sheldon', 'Cooper'),
+      new Contacto ('Chicho', 'Terremoto')
     ];
   }
 
   // Se crea una función para no exponer la lista
-  obtenerContactos (): string[] {
+  obtenerContactos (): Contacto[] {
     return this._contactos;
   }
   
-  altaContacto (contacto: string): void {
+  altaContacto (contacto: Contacto): void {
     this._contactos.push(contacto);
   }
 
@@ -36,8 +37,8 @@ export class ContactosService {
 
     // Se elimina el contacto del array mediante una eliminación de la 
     // posición del registro
-    let posicion = this._contactos.indexOf(contacto);
-    this._contactos.splice(posicion, 1);
+    // let posicion = this._contactos.indexOf(contacto);
+    // this._contactos.splice(posicion, 1);
   }
 
 }
