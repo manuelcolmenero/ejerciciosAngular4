@@ -1,0 +1,17 @@
+/*
+   Con las clases .ng-touched y ng-invalid se seleccionan aquellos elementos que se han visitado pero no se han informado o estan informados de forma erronea
+*/
+input.ng-touched.ng-invalid {
+    border: 1px solid red;
+}
+
+/*
+   Con las clases .ng-touched y ng-valid se seleccionan aquellos elementos que se han visitado y se han informado de forma correcta
+*/
+input.ng-touched.ng-valid {
+    border: 1px solid green;
+}
+
+.mensaje-error{
+    color: red;
+}

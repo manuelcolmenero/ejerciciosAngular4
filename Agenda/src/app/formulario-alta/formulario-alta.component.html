@@ -1,0 +1,97 @@
+<!-- 
+  Se incluye el formulario para el alta de contactos.
+  Para trabajar con formularios se necesita hacer uso de la directiva 'ngForm'.
+  Para obtener la referencia a la instancia 'FormGroup' del formulario, se usa un template reference variable, a la cual se le asigna como valor la propia directiva 'ngForm'
+-->
+<form ngForm #formularioContacto="ngForm" (ngSubmit)="notificarContacto(formularioContacto)">
+  <!--
+    Se incluye una caja para dar de alta contactos
+    Para trabajar con elementos de formulario se necesita hacer 
+    uso de la directiva 'ngModel'.
+    Para obtener la referencia a la instancia 'FormControl' del 
+    elemento, se utiliza un template reference variable, al 
+    cual se le asisgna como valor la propia directiva 'ngModel'.
+  -->
+  
+  <!-- Nombre del contacto -->
+  <label for="inputNombre">Nombre</label>
+  <input 
+  id="inputNombre"
+  placeholder="Ej. Ezzio"
+  type="text"
+  ngModel
+  name="nombreContacto"
+  #nombreContactoRef="ngModel"
+  required
+  >
+  <!--
+    Con la directiva 'ngIf' se escribe, o no, un elemento en el DOM; es decir, se renderiza en el navegador en función de si la expresión introducida como valor se resuelve a 'true' o 'false'
+  -->
+  <div *ngIf="nombreContactoRef.touched && nombreContactoRef.invalid" class="mensaje-error">El nombre es un dato obligatorio</div> 
+  
+  
+  <!-- Apellidos del contacto -->
+  <label for="inputApellidos">Apellidos</label>
+  <input 
+  id="inputApellidos"
+  placeholder="Ej. Auditore"
+  type="text"
+  ngModel
+  name="apellidoContacto"
+  >
+  
+  <!-- Móvil del contacto -->
+  <label for="inputMovil">Móvil</label>
+  <input 
+  id="inputMovil"
+  placeholder="Ej. 687 123 456"
+  type="text"
+  ngModel
+  name="movilContacto"
+  >
+  
+  <!-- eMail del contacto -->
+  <label for="inputEmail">eMail</label>
+  <input 
+  id="inputEmail"
+  placeholder="Ej. Ezzio@Assassins.it"
+  type="text"
+  ngModel
+  name="emailContacto"
+  >
+  
+  <!-- Cuenta FB del contacto -->
+  <label for="inputFB">FaceBook</label>
+  <input 
+  id="inputFB"
+  placeholder="Ej. Ezzio.Auditore"
+  type="text"
+  ngModel
+  name="facebookContacto"
+  >
+  
+  <!-- Cuenta twitter del contacto -->
+   <label for="inputTwitter">Twitter</label>
+  <input 
+  id="inputTwitter"
+  placeholder="Ej. @EzzioAssassin"
+  type="text"
+  ngModel
+  name="twitterContacto"
+  >
+  
+  <!-- Cuenta gitHub del contacto -->
+  <label for="inputGithub">gitHub</label>
+  <input 
+  id="inputGithub"
+  placeholder="Ej. EzzioAuditore"
+  type="text"
+  ngModel
+  name="githubContacto"
+  >
+
+  <!--
+    Se incluye el boton de guardar y se invalida si no se informa el campo
+  -->
+  <button type="submit" [disabled]="formularioContacto.invalid">Guardar contacto</button>
+</form>

@@ -2,10 +2,8 @@
   <!-- Se añade la directiva 'ngFor' se itera sobre una colección.
   Con cada itreación se referencia en la variable indicada el elemento iterado. Además, esta directiva replica sobre el elemento HTML sobre el cual se usa -->
   <li 
-    *ngFor="let contacto of datos"
-    [class.rojo]="esSpiderman(contacto)"
-    [style.fontSize]="esGokuChicho(contacto)">
-    {{ contacto }}
+    *ngFor="let contacto of datos">
+    {{ contacto.nombre }} {{ contacto.apellidos }}
     <!--
       Se añade un boton por cada registro iterado y se suscribe al evento 'click' envolviendo su nombre entre parentesis.
       
