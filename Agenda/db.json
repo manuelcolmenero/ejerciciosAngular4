@@ -19,19 +19,13 @@
       "id": 2
     },
     {
+      "nombre": "Mario",
+      "apellidos": "Super",
+      "movil": "123456789",
+      "email": "Mario@super.com",
+      "facebook": "mario.super",
+      "twitter": "@supermario",
       "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
     }
   ]
 }
