@@ -12,14 +12,7 @@ export class FormularioAltaComponent {
   @Output() clickBotonGuardar = new EventEmitter<Contacto>();
 
   notificarContacto(formulario: FormGroup): void{
-    let contacto = new Contacto (
-      formulario.value.nombreContacto,
-      formulario.value.apellidoContacto,
-      formulario.value.movilContacto,
-      formulario.value.emailContacto,
-      formulario.value.facebookContacto,
-      formulario.value.twitterContacto
-    );
+    let contacto = Contacto.nuevoDesdeJson(formulario.value);
     this.clickBotonGuardar.emit(contacto);
     formulario.reset();
   }

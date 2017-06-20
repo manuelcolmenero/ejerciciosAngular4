@@ -8,10 +8,18 @@
   </formulario-alta>
 
   <!-- 
-  Para enlazar los datos de un componente hijo, basta con indicar el atributo que se ha expuesto en éste. Si se quiere evaluar una expresión previamente a su asignación como valor del atributo, se envuelve con corchetes el atributo
--->
+  Para enlazar los datos de un componente hijo, basta con indicar el atributo 
+  que se ha expuesto en éste. Si se quiere evaluar una expresión previamente a
+  su asignación como valor del atributo, se envuelve con corchetes el atributo
+  -->
+
+  <!-- 
+    Cuando se trabaja con 'Observables' en los templates, se puede utilizar el 
+    pipe 'async'. Este pipe se encarga de gestionar la suscripción y desuscripción 
+    del 'Observable' en cuestión.
+  -->
   <lista-contactos 
-    [datos]="contactos | async" 
+    [datos]="contactos$ | async" 
     (clicBotonEliminar)="eliminarContacto($event)">
     </lista-contactos>
 </div>

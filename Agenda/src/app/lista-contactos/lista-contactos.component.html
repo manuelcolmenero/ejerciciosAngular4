@@ -3,7 +3,10 @@
   Con cada itreación se referencia en la variable indicada el elemento iterado. Además, esta directiva replica sobre el elemento HTML sobre el cual se usa -->
   <li 
     *ngFor="let contacto of datos">
-    {{ contacto.nombre }} {{ contacto.apellidos }}
+    <!-- 
+      Con '{{}}' se realiza interpolación de datos. Se evalúa la expresión indicada y el resultado se pinta en el navegador
+    -->
+    {{ obtenerNombreCompleto(contacto) }}
     <!--
       Se añade un boton por cada registro iterado y se suscribe al evento 'click' envolviendo su nombre entre parentesis.
       

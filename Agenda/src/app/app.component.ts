@@ -20,7 +20,7 @@ import { Contacto } from './contacto';
 export class AppComponent implements OnInit {
 
   // Atributo a nivel de instancia
-  contactos: Observable<Contacto[]>;
+  contactos$: Observable<Contacto[]>;
 
   // Para hacer una inyección de dependencias se necesita hacerlo
   // en el constructor de una clase. Se ha de indicar un 
@@ -34,12 +34,16 @@ export class AppComponent implements OnInit {
     // Se llama al servicio de contactos para obtener la lista
     // Para ello se mueve lo que devuelva 'obtenerContactos' en 
     // la variable de contactos (lista contactos que se está pintando).
-    this.contactos = this._contactosService.obtenerContactos();
+    this.contactos$ = this._contactosService.obtenerContactos();
   }
 
   guardarContacto(contacto: Contacto): void {
-    this._contactosService.altaContacto(contacto);
-    this.contactos = this._contactosService.obtenerContactos();
+    this._contactosService
+        .altaContacto(contacto)
+        .subscribe(() => {
+          this.contactos$ = this._contactosService.obtenerContactos();
+        });
+
   }
 
   eliminarContacto(contacto: string): void {
@@ -47,6 +51,6 @@ export class AppComponent implements OnInit {
     // con el boton (es el manejador) por lo que se mantiene y dentro 
     // de ella se llama al método de eliminar contactos del servicio.
     this._contactosService.eliminarContacto(contacto);
-    this.contactos = this._contactosService.obtenerContactos();
+    this.contactos$ = this._contactosService.obtenerContactos();
   }
 }
