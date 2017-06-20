@@ -21,4 +21,8 @@ export class ListaContactosComponent {
     // Se notifica 
     this.clicBotonEliminar.emit(regEliminar);
   }
+
+  obtenerNombreCompleto(dato: Contacto): string {
+    return `${dato.nombre} ${dato.apellidos}`;
+  }
 }

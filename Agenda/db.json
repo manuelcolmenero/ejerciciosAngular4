@@ -1,0 +1,37 @@
+{
+  "contactos": [
+    {
+      "nombre": "Ezzio",
+      "apellidos": "Auditore",
+      "movil": "687123456",
+      "email": "Ezzio@Assasins.it",
+      "facebook": "Ezzio.Assasin",
+      "twitter": "@EzzioAssasins",
+      "id": 1
+    },
+    {
+      "nombre": "Lara",
+      "apellidos": "Croft",
+      "movil": "555 666 777",
+      "email": "dospistolas@gmail.com",
+      "facebook": "Lara2guns",
+      "twitter": "@LaraCroft",
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    }
+  ]
+}

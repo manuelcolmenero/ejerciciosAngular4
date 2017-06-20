@@ -15,3 +15,12 @@ input.ng-touched.ng-valid {
 .mensaje-error{
     color: red;
 }
+
+button:disabled {
+    background-color: lightgrey;
+    border: 1px solid gray;
+}
+
+form{
+    background-color: seashell;
+}

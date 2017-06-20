@@ -1,0 +1,15 @@
+
+ul{
+    background-color: seashell;
+    list-style: none;
+}
+
+li {
+    margin: 0px;
+    padding: 6px 14px;
+}
+
+li:hover {
+    background-color: #F0F0F0;
+    cursor: pointer;
+}
