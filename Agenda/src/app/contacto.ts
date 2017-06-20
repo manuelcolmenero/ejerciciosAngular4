@@ -6,8 +6,7 @@ export class Contacto {
         public movil?: string,
         public email?: string,
         public facebook?: string,
-        public twitter?: string,
-        public github?: string
+        public twitter?: string
     ) {}
 }
 

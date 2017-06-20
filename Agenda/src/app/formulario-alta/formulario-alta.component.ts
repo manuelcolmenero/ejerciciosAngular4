@@ -18,8 +18,7 @@ export class FormularioAltaComponent {
       formulario.value.movilContacto,
       formulario.value.emailContacto,
       formulario.value.facebookContacto,
-      formulario.value.twitterContacto,
-      formulario.value.githubContacto
+      formulario.value.twitterContacto
     );
     this.clickBotonGuardar.emit(contacto);
     formulario.reset();
