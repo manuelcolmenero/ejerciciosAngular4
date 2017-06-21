@@ -35,6 +35,33 @@
       "facebook": "Vermi.cida",
       "twitter": "@Vermicida",
       "id": 4
+    },
+    {
+      "nombre": "Aloy",
+      "apellidos": "Cazadora de Máquinas",
+      "movil": "",
+      "email": "",
+      "facebook": "",
+      "twitter": "",
+      "id": 5
+    },
+    {
+      "nombre": "Peter",
+      "apellidos": "Parker",
+      "movil": "",
+      "email": "",
+      "facebook": "",
+      "twitter": "",
+      "id": 6
+    },
+    {
+      "nombre": "Stephen",
+      "apellidos": "Richards",
+      "movil": "",
+      "email": "",
+      "facebook": "",
+      "twitter": "",
+      "id": 7
     }
   ]
 }

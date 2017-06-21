@@ -2,9 +2,9 @@
   <!-- Se añade la directiva 'ngFor' se itera sobre una colección.
   Con cada itreación se referencia en la variable indicada el elemento iterado. Además, esta directiva replica sobre el elemento HTML sobre el cual se usa -->
   <li 
-    *ngFor="let contacto of datos">
+    *ngFor="let contacto of datos | ordenContactos">
     <!-- 
-      Con '{{}}' se realiza interpolación de datos. Se evalúa la expresión indicada y el resultado se pinta en el navegador
+      Con '{{ }}' se realiza interpolación de datos. Se evalúa la expresión indicada y el resultado se pinta en el navegador
     -->
     {{ obtenerNombreCompleto(contacto) }}
     <!--
