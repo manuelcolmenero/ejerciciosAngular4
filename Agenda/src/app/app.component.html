@@ -3,23 +3,21 @@
     <h1>Mi Agenda</h1>
   </header>
 
-  <!-- Se incluye el formulario de alta -->
-  <formulario-alta (clickBotonGuardar)="guardarContacto($event)">
-  </formulario-alta>
+  <!-- Barra de navegación -->
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/mis-contactos"
+           routerLinkActive="seleccionada">Mis Contactos</a>
+      </li>
+      <li>
+        <a routerLink="/nuevo-contacto"
+           routerLinkActive="seleccionada">Nuevo Contacto</a>
+      </li>
+    </ul>
+  </nav>
 
-  <!-- 
-  Para enlazar los datos de un componente hijo, basta con indicar el atributo 
-  que se ha expuesto en éste. Si se quiere evaluar una expresión previamente a
-  su asignación como valor del atributo, se envuelve con corchetes el atributo
-  -->
-
-  <!-- 
-    Cuando se trabaja con 'Observables' en los templates, se puede utilizar el 
-    pipe 'async'. Este pipe se encarga de gestionar la suscripción y desuscripción 
-    del 'Observable' en cuestión.
-  -->
-  <lista-contactos 
-    [datos]="contactos$ | async" 
-    (clicBotonEliminar)="eliminarContacto($event)">
-    </lista-contactos>
+  <!-- Zona dinamica donde cargamos las distintas secciones -->
+  <router-outlet></router-outlet>
+  
 </div>
