@@ -15,7 +15,7 @@ export class ContactosService {
 
   constructor(private _http: Http) { }
 
-  // Se crea una función para no exponer la lista
+  // Se crea una función para no exponer la lista.
   obtenerContactos (): Observable<Contacto[]> {
 
     // El cliente HTTP trabaja con objetos 'Response'. Este objeto tiene datos relacionados 
